@@ -29,10 +29,10 @@ inputChange.addEventListener('keydown', event =>{
 
 
 //3 wheel
-const logoZoom = document.getElementsByTagName('nav');
-logoZoom.addEventListener('wheel', event =>{
-    logoZoom.style.fontSize = '3rem';
-});
+// const logoZoom = document.getElementsByTagName('nav');
+// logoZoom.addEventListener('wheel', event =>{
+//     logoZoom.style.fontSize = '3rem';
+// });
 
 //4 drag drop
 function allowDrop(event){
@@ -47,11 +47,41 @@ function drop(event){
     event.target.appendChild(document.getElementById(data));
 }
 //5 load
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+  });
+
 //6 focus
+const form = document.getElementById('form');
+form.addEventListener('focus', (event)=>{
+    event.target.style.background = '#FFE4E1';
+},true);
+form.addEventListener('blur', (event) => {
+    event.target.style.background = '';    
+  }, true);
+
 //7 resize
+window.addEventListener('resize', event =>{
+    const changeBg =document.querySelector('body').style.backgroundColor = '#F0FFF0';
+})
+
 //8 scroll
-//9 select
-//10 dbclick
+var count = 0;
+function scrollCount(){
+    document.getElementById('count').innerHTML = count += 1;
+}
+
+//9 select name field
+document.getElementById('inputField').onselect = function(){selectClick()};
+function selectClick(){
+    alert('text selected');
+}
+
+//10 dbclick fun in the sun
+function doubleClick(){
+    alert('paragraph clicked.')
+}
+
 
 
 
