@@ -29,10 +29,12 @@ inputChange.addEventListener('keydown', event =>{
 
 
 //3 wheel
-// const logoZoom = document.getElementsByTagName('nav');
-// logoZoom.addEventListener('wheel', event =>{
-//     logoZoom.style.fontSize = '3rem';
-// });
+const logoZoom = document.getElementsByTagName('nav')[0];
+logoZoom.addEventListener('wheel', event =>{
+    event.preventDefault();
+    logoZoom.style.backgroundColor = 'blue';
+    console.log(logoZoom);
+});
 
 //4 drag drop
 function allowDrop(event){
