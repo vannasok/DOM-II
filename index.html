@@ -20,7 +20,10 @@
 
   <header class="main-navigation">
     <div class="container nav-container">
-      <h1 class="logo-heading">Fun Bus</h1>
+      <h1 class="logo-heading" id="logo-heading">Fun Bus</h1>
+      <div id="emptyBox" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+      <img id="small-logo" src="img/adventure.jpg"  draggable="true" ondragstart="drag(event)" alt="">
+      
       <nav class="nav">
         <a class="nav-link" href="#">Home</a>
         <a class="nav-link" href="#">About Us</a>
@@ -61,17 +64,26 @@
       <h2>Pick Your Destination</h2>
       <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
       <img src="img/destination.jpg" alt="Second slide">
+      <form id="form">
+        <p>Name: <input type='text' id="inputField" placeholder="Name"></p>
+        <br>
+        <p>Password: <input type='text' id="inputField" placeholder="password"></p>
+      </form>
+      <div id="scrollDiv" onscroll="scrollCount()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, blanditiis!<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt illo dicta voluptatum impedit repellendus aliquid praesentium tempora, alias aut nemo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non velit unde fuga autem neque voluptas nesciunt, ipsum eos ut dignissimos quis nam et magni blanditiis!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptate distinctio unde magni quidem, similique inventore debitis temporibus cumque praesentium?
+      </div>
+      <p>Scroll counting: <span id="count">0</span> times.</p>
     </section>
     <section class="content-pick">
 
       <div class="destination">
         <h4>Fun In The Sun</h4>
-        <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-        <div class="btn">Sign Me Up!</div>
+        <p ondblclick="doubleClick()">Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+        <div class="btn" >Sign Me Up!</div>
       </div>
       <div class="destination">
         <h4>Mountain Excursion</h4>
-        <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+        <p id="selectText">Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
         <div class="btn">Sign Me Up!</div>
       </div>
       <div class="destination">
